@@ -1,0 +1,103 @@
+name:                a-simple-http-service
+version:             0.1.0.0
+github:              "githubuser/a-simple-http-service"
+license:             BSD3
+author:              "Author name here"
+maintainer:          "example@example.com"
+copyright:           "2018 Author name here"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/githubuser/a-simple-http-service#readme>
+
+default-extensions:
+- OverloadedStrings
+- DeriveGeneric
+- ScopedTypeVariables
+
+dependencies:
+- base >= 4.7 && < 5
+
+# JSON
+- aeson
+- aeson-casing
+
+# HTTP req
+- wreq
+- bytestring
+- lens
+- http-types
+- lens-aeson
+- text
+- http-client
+- http-client-tls
+
+# Strings
+- string-conversions
+
+# Config
+
+# DB
+- postgresql-simple
+- postgresql-simple-migration
+- resource-pool
+
+# HTTP Server
+- scotty
+
+- unordered-containers
+# Logging
+- hslogger
+- time
+
+# Middleware
+- uuid
+- wai
+- http-client
+
+ghc-options:
+# https://github.com/commercialhaskell/rio#ghc-options
+- -Wall
+- -Wcompat
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wredundant-constraints
+
+library:
+  source-dirs: src
+
+executables:
+  a-simple-http-service-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+
+    dependencies:
+    - a-simple-http-service
+
+tests:
+  a-simple-http-service-test:
+    # changed to Main.hs
+    main:                Main.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - a-simple-http-service
+    - hspec
+    - hspec-discover
+    - hspec-core

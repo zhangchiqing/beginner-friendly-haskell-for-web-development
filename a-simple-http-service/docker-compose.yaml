@@ -1,0 +1,16 @@
+version: '2.1'
+services:
+  db:
+    image: postgres:9.6.1
+    ports:
+      - "7432:5432"
+    command: postgres -c log_statement=all
+    environment:
+      - POSTGRES_DB=simpleservice
+  db_test:
+    image: postgres:9.6.1
+    ports:
+      - "7433:5432"
+    command: postgres -c log_statement=all
+    environment:
+      - POSTGRES_DB=simpleservice_test
