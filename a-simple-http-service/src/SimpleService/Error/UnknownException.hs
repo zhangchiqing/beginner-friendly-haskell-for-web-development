@@ -4,7 +4,7 @@ import Control.Exception (Exception, throw)
 import Data.Text (Text)
 
 newtype UnknownException = UnknownException
-  { func :: Text
+  { caller :: Text
   } deriving (Show)
 
 instance Exception UnknownException

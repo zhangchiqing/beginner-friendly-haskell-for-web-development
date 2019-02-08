@@ -1,12 +1,11 @@
 module SimpleService.DB.UserSpec where
 
-import Control.Exception (throwIO)
 import SimpleService.DB.User (createUser, deleteUserByName, getUserByName)
 import SimpleService.Error.UserError (UserError(..))
 import SimpleService.Test.Setup (removeAll)
 import SimpleService.Types.CreateUser (CreateUser(..))
 import SimpleService.Types.User (User(..))
-import Test.Hspec (Spec, SpecWith, before, describe, it, shouldBe)
+import Test.Hspec (Spec, before, describe, it, shouldBe)
 
 testCreateUser :: CreateUser
 testCreateUser = CreateUser "alice" "alice@example.org"
@@ -16,11 +15,11 @@ userToCreateUser (User _ _ name email) = CreateUser name email
 
 shouldBeRight :: (Show a) => Either a b -> IO b
 shouldBeRight (Left a) =
-  throwIO $ concat ["should be Right value but isn't, because:", show a]
+  error $ concat ["should be Right value but isn't, because:", show a]
 shouldBeRight (Right b) = return b
 
 shouldBeJust :: Maybe a -> IO a
-shouldBeJust Nothing = throwIO "should be Just value but is nothing"
+shouldBeJust Nothing = error "should be Just value but is nothing"
 shouldBeJust (Just a) = return a
 
 spec :: Spec
