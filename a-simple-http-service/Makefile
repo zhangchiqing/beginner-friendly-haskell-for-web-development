@@ -15,7 +15,7 @@ build:
 
 # depends on db, build
 run:
-	source .envrc && stack run
+	source .envrc && stack exec a-simple-http-service-exe
 
 # depends on db_test
 test:

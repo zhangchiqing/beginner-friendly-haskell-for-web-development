@@ -12,4 +12,29 @@
 - [x] Unit tests and Integation tests are included
 - [ ] Docker Ready
 
+## How to install
+```
+make install
+```
+
+## How to launch PostgreSQL
+```
+make db
+```
+
+## How to run a build
+```
+make build
+```
+
+## How to run the service
+```
+make run
+```
+
+## How to run the tests
+```
+make db_test
+make test
+```
 
