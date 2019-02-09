@@ -1,7 +1,7 @@
 .PHONY: install test
 
 install:
-	echo "install haskell and GHC via Homebrew: brew cask install haskell-for-mac"
+	cat howtoinstall.md
 
 db:
 	docker-compose up -d db
