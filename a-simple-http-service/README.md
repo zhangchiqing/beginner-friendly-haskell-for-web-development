@@ -34,6 +34,26 @@ make run
 
 check: http://127.0.0.1:3000/ping
 
+Example logs:
+```
+source .env && stack exec a-simple-http-service-exe
+NOTICE:  relation "schema_migrations" already exists, skipping
+[2019-02-10 17:57:11.464345 UTC] [INFO] HTTP.Server Starting up service with port 3000
+Setting phasers to stun... (port 3000) (ctrl-c to quit)
+[2019-02-10 17:57:17.863043 UTC] [INFO] [RequestId] 951b69d9-0139-406b-ba3b-9131da6b2076 GET /ping
+[2019-02-10 17:57:17.863875 UTC] [INFO] [Response] 951b69d9-0139-406b-ba3b-9131da6b2076 ResponseCode: 200
+[2019-02-10 17:57:24.233988 UTC] [INFO] [RequestId] 9d9c968b-e18c-4013-83c1-e70d8fa9ee83 POST /users
+[2019-02-10 17:57:24.246 UTC] [INFO] [Response] 9d9c968b-e18c-4013-83c1-e70d8fa9ee83 ResponseCode: 200
+[2019-02-10 17:57:30.271769 UTC] [INFO] [RequestId] 9c5f060b-1007-472a-a9e5-6228fc14f16b GET /user
+[2019-02-10 17:57:30.272585 UTC] [INFO] [Response] 9c5f060b-1007-472a-a9e5-6228fc14f16b ResponseCode: 400
+[2019-02-10 17:57:37.892525 UTC] [INFO] [RequestId] 6812c2ca-fe9d-4dfb-8fc3-829ac497f71e GET /user
+[2019-02-10 17:57:37.901869 UTC] [INFO] [Response] 6812c2ca-fe9d-4dfb-8fc3-829ac497f71e ResponseCode: 200
+[2019-02-10 17:57:45.059709 UTC] [INFO] [RequestId] 3b73f91f-f8c7-4dcb-b3a4-905a0afe4471 DELETE /user/alice
+[2019-02-10 17:57:45.064397 UTC] [INFO] [Response] 3b73f91f-f8c7-4dcb-b3a4-905a0afe4471 ResponseCode: 204
+[2019-02-10 17:57:56.571939 UTC] [INFO] [RequestId] cbc44b95-ef39-402b-b6f5-280ccf73d6de GET /users
+[2019-02-10 17:57:56.572778 UTC] [INFO] [Response] cbc44b95-ef39-402b-b6f5-280ccf73d6de ResponseCode: 404
+```
+
 ## How to run the tests
 ```
 make db_test
