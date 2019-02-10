@@ -1,5 +1,16 @@
 version: '2.1'
 services:
+  api:
+    environment:
+      - PORT=3000
+      - SECRET=mysecret
+      - DB_CONN_STRING=postgres://postgres@db:5432/simpleservice?sslmode=disable
+    image: zhangchiqing/a-simple-http-service
+    ports:
+      - "3002:3000"
+    depends_on:
+      db:
+        condition: service_healthy
   db:
     image: postgres:9.6.1
     ports:
@@ -7,6 +18,11 @@ services:
     command: postgres -c log_statement=all
     environment:
       - POSTGRES_DB=simpleservice
+    healthcheck:
+      test: psql -h localhost -d simpleservice -U postgres -c "SELECT 1=1"
+      interval: 2s
+      timeout: 30s
+      retries: 10
   db_test:
     image: postgres:9.6.1
     ports:

@@ -1,4 +1,4 @@
-# Beginner-friendly Haskell Web Development
+# Beginner-friendly Real World Haskell Web Development
 
 ### Why Haskell
 Learning Haskell changed the way I think about programming. Objective oriented programming taught me to think in terms of "object" with its mutable fields, and "methods" for their interactions between each others. In Haskell, I learned to think in terms of "data", and "functions" for data transformation. I found it's more straightforward and allows me to write less code.
@@ -17,7 +17,7 @@ You don't need any knowledge of Haskell. This book teaches language basics and u
 
 ### Book structure
 
-This book's goal is to show how to build a RESTful API for getting, creating, updating and deleting users from postgres database.
+This book's goal is to show how to build a RESTful API for getting, creating, updating and deleting users from PostgreSQL database.
 
 #### Chapter 1. Getting Started
 The first chapter teaches how to setup the development environment and setup a Haskell project.

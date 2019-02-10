@@ -67,6 +67,7 @@ dependencies:
 ghc-options:
 # https://github.com/commercialhaskell/rio#ghc-options
 - -Wall
+- -Werror
 - -Wcompat
 - -Wincomplete-record-updates
 - -Wincomplete-uni-patterns
