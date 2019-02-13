@@ -8,12 +8,12 @@ Haskell is a static typed pure functional language. While the functional program
 ### Why this book
 To me, the best way to learn things is by using it in practice. Despite there are a lot of books about Haskell, I found there isn't any book focusing on how to use it for real world web development. After learning the language basics from those books, it still requires a lot effort to figure out how to solve those unique challenges in web development. However, I've gone though all of them and designed a complete real world scenario to teach Haskell and show how to build a web app with it. Given there are many ways of solving these challenges in Haskell, my decision of choosing them is to keep it beginner friendly.
 
-Beginner friendly is a trade off that it's sometimes hard to archieve with both of writing less code and keeping the code easy for beginner. Beginner friendly is an important factor to allow building things in a collaborative team setting. As most Haskell books teach Monad Transformer, which is very powerful of an abstraction, but it's also a bit of mind twist for beginners to master and understand it in practice. It decided to build a real world web app without using Monad Transformers, but only use basic language building blocks.
+Beginner friendly is a trade off that it's sometimes hard to archieve with both of writing less code and keeping the code easy for beginner. Beginner friendly is an important factor to allow building things in a collaborative team setting. As most Haskell books teach advanced language feature like Monad Transformer, Advanced type classes, which are great abstractions that allow you to reuse lots of code. However, they are a bit of mind twist for beginners to master and understand it in practice, and are not required for building a real world web app. I decided to make a tradeoff to build a real world web app without using these advanced abstractions, but only basic language building blocks in order to keep the code beginner friendly. I think it would be easier for beginners to understand the point of those advanced abstractions by building something without them and then refactor with them.
 
 ### About you
 The intended audience of this book is people who have basic knowledge of web programming. You should know how HTTP works, how SQL query works.
 
-You don't need any knowledge of Haskell. This book teaches language basics and uses what you learned from the beginning to build a real world web app.
+You don't need any knowledge of Haskell. This book teaches language basics and uses what you've learned from the beginning to build a real world web app.
 
 ### Book structure
 

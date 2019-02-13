@@ -2,11 +2,6 @@
 
 ## Feature
 - [x] Simple: NO Monad Transformer. NO Advanced type classes. NO TemplateHaskell.
-
-> Why not?
-
-Despite they are great abstractions that allow you to reuse lots of code, they are not required for building a real world web app. I decided not to use them in order to keep the code beginner friendly.
-
 - [x] Simple: Only used 3 language extensions: OverloadedStrings, DeriveGeneric, ScopedTypeVariables
 - [x] Connect to PostgreSQL, supports migrations
 - [x] Example of a HTTP Client to external service (httpbin.org)
