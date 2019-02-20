@@ -1,7 +1,7 @@
 # Beginner-friendly Real World Haskell Web Development
 
 ### Why Haskell
-Learning Haskell changed the way I think about programming. Objective-oriented programming taught me to think in terms of "object," with its mutable fields, and "methods," for their interactions between each other. In Haskell, I learned to think in terms of "data" and "functions" for data transformation. I found it's more straightforward and allows me to write less code.
+Learning Haskell changed the way I think about programming. Objective-oriented programming taught me to think in terms of "object" with its mutable fields, and "methods" for their interactions between each other. In Haskell, I learned to think in terms of "data" and "functions" for data transformation. I found it's more straightforward and allows me to write less code.
 
 Haskell is a static typed, pure functional language. While the functional programming allows you to reuse a lot of code for data transformation, the Haskell compiler also checks the types you defined for the data and the data transformation functions to catch mistakes before they get run.
 
@@ -28,34 +28,36 @@ My goal is to show how to build a RESTful API for getting, creating, updating an
 The first chapter shows how to set up the development environment and start a Haskell project.
 
 #### Chapter 2. Functions
-Chapters 2 through 5 cover the language basics and provide data structures with examples for modeling the user data.
+Chapters 2 through 4 cover the language basics and provide data structures with examples for modeling the user data.
 #### Chapter 3. Recursion, Pattern Matching, Higher Order Functions
 #### Chapter 4. Typeclass
+
 #### Chapter 5. Configure
+Chapter 5 introduces IO and how to parse an app's configuration.
 
 #### Chapter 6. JSON
-Chapter 6 introduces IO and how to parse an app's configuration.
+Chapter 6 introduces how to encode data type into JSON and how to decode JSON into our type.
 
 #### Chapter 7. Strings
-Chapter 7 introduces how to encode data type into JSON and how to decode JSON into our type.
+Chapter 7 introduces the difference between the various string types and their use cases.
 
 #### Chapter 8. HTTP Client
-Chapter 8 introduces the difference between the various string types and their use cases.
+Chapter 8 demonstrates how to build an HTTP client for sending HTTP calls and parsing the response.
 
 #### Chapter 9. Database
-Chapter 9 demonstrates how to build an HTTP client for sending HTTP calls and parsing the response.
+Chapter 9 explains how to connect to a PostgreSQL database, how to migrate a database, how to make queries to create, retrieve, and delete a user.
 
 #### Chapter 10. Error Handling
-Chapter 10 explains how to connect to a PostgreSQL database, how to migrate a database, how to make queries to create, retrieve, and delete a user.
+Chapter 10 introduces exceptions, how to handle exceptions from the database queries, and how to turn them into specific errors.
 
 #### Chapter 11. HTTP Service
-Chapter 11 introduces exceptions, how to handle exceptions from the database queries, and how to turn them into specific errors.
+Chapter 11 shows how to set up an HTTP service and how to parse and validate the inputs. We will build endpoints for making database queries.
 
 #### Chapter 12. Logging
-Chapter 12 shows how to set up an HTTP service and how to parse and validate the inputs. We will build endpoints for making database queries.
+Chapter 12 introduces loggings, how to log HTTP requests and responses, and how to log exceptions.
 
 #### Chapter 13. Middlware
-Chapter 13 introduces loggings, how to log HTTP requests and responses, and how to log exceptions.
+Chapter 13 explains  how to create a middleware for adding a unique id to each request, and tie all the logs about a request and its response with that id.
 
 #### Chapter 14. Testing
 Chapter 14 introduces how to write tests for the functions for database queries and how to write integration tests for HTTP endpoints.
