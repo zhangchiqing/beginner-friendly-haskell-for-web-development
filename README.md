@@ -66,4 +66,4 @@ Chapter 14 introduces how to write tests for the functions for database queries 
 Chapter 15 shows how to build a docker container for the web app and deploy it to Heroku.
 
 ### How to get this book?
-Feel free to contact me if you are interested in this book: zhangchiqing@gmail.com
+Feel free to contact me if you are interested in this book: zhangchiqing+beginnerfriendlyhaskell@gmail.com
