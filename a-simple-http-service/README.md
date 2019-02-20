@@ -1,16 +1,16 @@
 # A simple RESTful HTTP Service in Haskell
 
 ## Feature
-- [x] Simple: NO Monad Transformer. NO Advanced type classes. NO TemplateHaskell.
-- [x] Simple: Only used 3 language extensions: OverloadedStrings, DeriveGeneric, ScopedTypeVariables
-- [x] Connect to PostgreSQL, supports migrations
-- [x] Example of a HTTP Client to external service (httpbin.org)
-- [x] RESTful API for CRUD
-- [x] Error Handling: Returning 4xx for any invalid request. Returning 500 for any internal service exception.
-- [x] Logging to stdout. Logging every request and respond with request id. Logging any internal exception.
-- [x] Environment configured by Envvar
-- [x] Unit tests and Integation tests are included
-- [x] Docker Ready
+ - [x] Simple: No monad transformer, no advanced typeclasses, no TemplateHaskell.
+ - [x] Simple: Use only 3 language extensions: OverloadedStrings, DeriveGeneric, ScopedTypeVariables
+ - [x] Connects to PostgreSQL, supports migrations
+ - [x] Example of an HTTP Client to external service (httpbin.org)
+ - [x] RESTful API for CRUD
+ - [x] Error Handling: Returning 4xx for any invalid request. Returning 500 for any internal service exception.
+ - [x] Logging to stdout. Logging every request and respond with request id. Logging any internal exception.
+ - [x] Environment configured by Envvar
+ - [x] Unit tests and Integation tests are included
+ - [x] Docker Ready
 
 ## How to install
 ```
@@ -68,9 +68,9 @@ make builder-image
 It builds a `zhangchiqing/stack-libpq` image as the builder.
 
 #### Why do we need a builder image?
-Since we don't need the compiler on production, it's a different image than the final deployed image so that it's just for building the executable binary.
+Since we don't need the compiler on production, it's a different image than the final deployed image. The builder image is just for building the executable binary.
 
-And since we want to run the application on Linux, the code has to be compiled under linux
+And since we want to run the application on Linux, the code has to be compiled under Linux.
 
 ### 2. Build a builder image, which is the image for compiling the code on Linux
 ```
@@ -78,7 +78,7 @@ make builder-image
 ```
 This compiles to executable binaries for Linux and place it in the mounted volume at `a-simple-http-service/.stack-work/install/x86_64-linux/lts-11.1/8.2.2/bin`.
 
-The initial build takes a long time, but since we cache the build (the `~/.stack` folder). The second time to build takes only seconds if there is no change. Thanks to stack!
+The initial build takes a long time, but since we cache the build (the `~/.stack` folder). The second build takes only seconds if there is no change. Big thanks to stack!
 
 ### 3. Build a deployment base image
 ```
