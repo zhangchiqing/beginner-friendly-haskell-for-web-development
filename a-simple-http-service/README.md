@@ -72,9 +72,9 @@ Since we don't need the compiler on production, it's a different image than the 
 
 And since we want to run the application on Linux, the code has to be compiled under Linux.
 
-### 2. Build a builder image, which is the image for compiling the code on Linux
+### 2. Build the executables under Linux in Docker
 ```
-make builder-image
+make docker-build
 ```
 This compiles to executable binaries for Linux and place it in the mounted volume at `a-simple-http-service/.stack-work/install/x86_64-linux/lts-11.1/8.2.2/bin`.
 
